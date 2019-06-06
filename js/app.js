@@ -1,5 +1,9 @@
 'use strict';
 
+var correct = 0;
+
+var question1through5 = function() {
+
 //the guessing game begins
 var questions = ['Once I worked on a goatfarm, in Adelaide.  Believe it?',
   'Ski partrol at Northstar cut their budget, so I taught at the ski school. Believe it?',
@@ -17,7 +21,6 @@ var responses = ['There was a ram on that farm that loved me so much, it hurt.',
 
 var answers = [true, true, false, false, true];
 
-var correct = 0;
 var wrongAnswer = 'Nope!  Wrong answer.';
 
 
@@ -58,8 +61,11 @@ for (var qI = 0 ; qI < questions.length; qI++){
   console.log(questions[qI]);
   console.log('score: ' + correct);
 }//end for loop
+}
 
+question1through5();
 
+var numbersGame = function() {
 //a game of numbers
 alert('Would you like to play a game?  Guess my favorite number!  You have four tries to get it right.');
 
@@ -97,8 +103,11 @@ while (sentinelCondition === false && iteratorNumbers < 4){
     iteratorNumbers++;
   }
 }
+} //End of numbersGame.
 
+numbersGame();
 
+var multipleStates = function() {
 //question seven, multiple right answers.  
 
 var multipleStatesCorrectSeven = ['california', 'maine', 'kentucky', 'oregon'];
@@ -134,87 +143,16 @@ while (sentinelConditionSeven === false && iteratorSeven < questionSevenTries){
   }
   iteratorSeven++;
 }//end question seven
+} //End of multipleStates.
 
+multipleStates();
+
+var finalAndOutput = function() {
 //final queston
 var userName = prompt('Great Job!  But what\'s your name?');
 
 //output to html the correct guesses and states.
 document.getElementById('writeHere').innerHTML = 'You got ' + correct + ' out of 7, '+ userName + '!';
-
-
-//END HERE
-
-/* previous lab2, ignore, keep for records..
-
-//Question one
-var favoriteColor = prompt('Is your favorite color the color of the sky, at dawn on the beach, in april?');
-var favoriteColorLowered = favoriteColor.toLowerCase();
-console.log(favoriteColorLowered[0]);
-//if yes
-if(favoriteColor[0] === 'y')
-{
-  alert('That\'s my favorite color too.');
-}
-else
-{
-  //if anything else
-  alert('I guess there are other colors out there.  Maybe.');
 }
 
-//Question two
-var life = prompt('Do you ever wonder if theres life outside this planet?');
-var lifeLow = life.toLowerCase();
-console.log(lifeLow[0]);
-//if yes
-if(lifeLow[0] === 'y')
-{
-  alert('Wouldn\'t it be exciting?.');
-}
-else
-{
-  //if anything else
-  alert('Simplicity is often bliss.');
-}
-
-//Question three
-var seeing = prompt('But if there was life on other worlds, would we even recognize it, do you think?');
-var seeingLow = seeing.toLowerCase();
-console.log(seeingLow[0]);
-//if yes
-if(seeingLow[0] === 'y')
-{
-  alert('Maybe! Life could be sentient silica circles, and be the size of moons!');
-}
-else
-{
-  //if anything else
-  alert('Maybe not, indeed.  Who knows what grows in strange gardens.');
-}
-
-//Question four
-var makeIt = prompt('Do you think we\'ll make it as a species past the nuclear era and into space?');
-var makeItLow = makeIt.toLowerCase();
-console.log(makeItLow[0]);
-//if yes
-if(makeItLow[0] === 'y'){
-  alert('I hope so.');
-}
-else{
-  //if anything else
-  alert('If not, I suppose something will make it past us.  Beetles, maybe.');
-}
-
-//Question five
-var colonize = prompt('If you could, would you leave to colonize another planet?');
-var colonizeLowered = colonize.toLowerCase();
-console.log(colonizeLowered[0]);
-//if yes
-if(colonizeLowered[0] === 'y'){
-  alert('Brave.');
-}
-else{
-  //if anything else
-  alert('The heart wants what it wants.');
-}
-
-*/
+finalAndOutput();
